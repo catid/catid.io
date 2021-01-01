@@ -169,7 +169,9 @@ This was important for a printing cases where there are screw holes that extend 
 
 Using [Polylite ASA](https://us.polymaker.com/product/polylite-asa/).
 
-I settled on these by printing [this stringing test](https://www.thingiverse.com/thing:2219103) in a grid search for the right settings.
+I settled on these by printing this stringing test
+https://www.thingiverse.com/thing:2219103
+in a grid search for the right settings.
 
 Starting from ABS settings above:
 
