@@ -165,6 +165,8 @@ This was important for a printing cases where there are screw holes that extend 
 
 The 3D Printer community provides a lot of worthwhile upgrades to the printer that I installed:
 
+![Mods](mods.jpg)
+
 * [Customizable Adjustable Glass Bed Bracket](https://github.com/DrLex0/print3d-adjustable-glass-bed-bracket)
 * [Flashforge Creator Pro Filament Guide](https://www.thingiverse.com/thing:2174107)
 * [Flashforge Creator PRO Extruder cable support clip](https://www.thingiverse.com/thing:416889)

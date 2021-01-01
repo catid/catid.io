@@ -2,3 +2,7 @@
   color: "#007acc"
   icon: ./assets/images/logo.jpg
   featured: true
+- name: "3D Printing"
+  color: "#007acc"
+  icon: ./assets/images/3dprint.jpg
+  featured: true

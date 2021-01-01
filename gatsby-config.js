@@ -3,7 +3,7 @@ module.exports = {
     title: `catid's Hacks`,
     siteUrl: `https://nehalem.netlify.com`,
     description: `Better than kinky sex with models`,
-    topics: ["Game Hacking", "Startups", "VR", "Forward Error Correction"],
+    topics: ["Game Hacking", "Startups", "VR", "Forward Error Correction", "3D Printing"],
     menu: [
       {
         name: 'Home',
