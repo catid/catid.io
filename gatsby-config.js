@@ -1,39 +1,41 @@
 module.exports = {
   siteMetadata: {
-    title: `nehalem-starter`,
+    title: `catid`,
     siteUrl: `https://nehalem.netlify.com`,
-    description: `A Gatsby starter for nehalem`,
-    topics: [],
+    description: `Better than kinky sex with models`,
+    topics: ["Game Hacking", "Startups", "VR", "Forward Error Correction"],
     menu: [
       {
         name: 'Home',
         path: '/'
       },
       {
-        name: 'Example',
-        path: '/page'
+        name: 'Origin Story',
+        path: '/game_hacking'
       },
     ],
     footerMenu: [
       {
-        name: 'Example',
-        path: '/page'
+        name: 'Home',
+        path: '/'
+      },
+      {
+        name: 'Origin Story',
+        path: '/game_hacking'
       },
     ],
     search: true,
     author: {
-      name: `nehalem`,
-      description: `I'm <strong>nehalem</strong>, a Gatsby theme by 
-        <a href="https://nehalist.io" rel="noopener" target="_blank">nehalist.io</a>. If you like what you see feel free to give a 
-        <a href="https://github.com/nehalist/gatsby-theme-nehalem" rel="noopener" target="_blank">star on GitHub!</a>`,
+      name: `catid`,
+      description: `Retweet me.  Star my repos.  Like my videos.`,
       social: {
         facebook: ``,
-        twitter: `https://twitter.com/nehalist`,
-        linkedin: `https://www.linkedin.com/in/kevin-hirczy-7a9377106/`,
+        twitch: ``,
         instagram: ``,
-        youtube: ``,
-        github: `https://github.com/nehalist`,
-        twitch: ``
+        github: `https://github.com/catid`,
+        twitter: `https://twitter.com/mrcatid`,
+        linkedin: `https://www.linkedin.com/in/christopher-taylor-1a539a31/`,
+        youtube: `https://www.youtube.com/channel/UChp5dJk1m-rOKXeCfb8gGxA`
       }
     }
   },
@@ -48,7 +50,7 @@ module.exports = {
           background_color: `#a4cbb8`,
           theme_color: `#a4cbb8`,
           display: `minimal-ui`,
-          icon: `${__dirname}/content/assets/images/logo.png`
+          icon: `${__dirname}/content/assets/images/logo.jpg`
         }
       }
     }
