@@ -192,9 +192,9 @@ I increased movement speed to give it less time to string, which will make print
 
 ### Temperature
 
-* `Heated Build Platform`: `93C`
+* `Heated Build Platform`: `98C`
 
-ASA sticks pretty well to PEI and removes about as easily as ABS, at a lower temperature.
+ASA sticks pretty well to PEI and removes about as easily as ABS, at a lower temperature.  At 93C I was getting curling on longer prints, so bumped it up another few degrees.
 
 * `Right Extruder Temperature`: `245C`
 
