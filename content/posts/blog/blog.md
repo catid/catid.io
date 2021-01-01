@@ -42,6 +42,8 @@ You can see almost the same content in the preview window as you'd see in the WS
 
 Instead of a complicated Gatsby setup with Node dependencies, you can use the same tools for writing software to write a blog.  But when making changes to the theme and other areas of the site than just writing a new post, it's important to be able to locally test changes to iterate faster and find/fix syntax errors.
 
+![VSCode](vscode.jpg)
+
 
 ## Gatsby on Windows
 
@@ -54,3 +56,7 @@ WSL install Windows 10 and upgrade to WSL2: [https://docs.microsoft.com/en-us/wi
 After installing Ubuntu I had to fix one bug in the default scripts.  Fix hostname resolution bug in WSL2: [https://github.com/microsoft/WSL/issues/5420](https://github.com/microsoft/WSL/issues/5420)
 
 And then I'm able to edit the blog code using Visual Studio Code by just typing `code .` in the git checkout, and it pops up in my familiar editor of choice.
+
+The `gatsby develop` command frequently fails randomly and needs to be restarted.
+
+Also VSCode often does not launch and I need to click `Retry` a few times to get it to connect.
