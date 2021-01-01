@@ -34,6 +34,15 @@ Ignore the example AWS Amplify site.  There's no need to add anything to the rep
 I'd like to use [CloudFlare's CDN](https://www.cloudflare.com/network/) to host my static site because it would load faster for people outside the USA, but haven't figured out how to get that to work with AWS Amplify yet.
 
 
+## AWS Amplify makes it Easy
+
+AWS Amplify is a really nice way to write for a blog site.  To make a new post, I don't even need WSL really.  Just git and VSCode with a markdown preview extension.
+
+You can see almost the same content in the preview window as you'd see in the WSL+Gatsby browser hot reload view, just without some fancy formatting.
+
+Instead of a complicated Gatsby setup with Node dependencies, you can use the same tools for writing software to write a blog.  But when making changes to the theme and other areas of the site than just writing a new post, it's important to be able to locally test changes to iterate faster and find/fix syntax errors.
+
+
 ## Gatsby on Windows
 
 ### The way to go: WSL2, Ubuntu app, Visual Studio Code
