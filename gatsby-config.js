@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `catid`,
+    title: `catid's Hacks`,
     siteUrl: `https://nehalem.netlify.com`,
     description: `Better than kinky sex with models`,
     topics: ["Game Hacking", "Startups", "VR", "Forward Error Correction"],
