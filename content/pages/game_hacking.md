@@ -23,7 +23,7 @@ I developed a prime number generator in BASIC as one of my first programs.  It s
 
 ### Block Forts
 
-I also made massive block forts:
+I also built massive block forts:
 
 ![Button Contraption](game_hacking/blocks.jpg)
 
@@ -63,7 +63,9 @@ I worked with another hacker I only know as Coconut Emulator, to develop a game-
 
 This was my first medium sized C++ project and was about the time that I learned about memory safety bugs. ;)
 
-Since I stopped playing when I went off to college, the community has since continued hosting the bot site: http://www.mervbot.com/
+I stopped maintaining the software shortly after I went off to college, and the community has since continued hosting the bot site: http://www.mervbot.com/
+
+Also found that someone has cloned the code to GitHub so it's forked here: https://github.com/catid/ssbot
 
 ### SubSpace : Game Client
 

@@ -18,12 +18,30 @@ I had a false start with a new static page blog website, but didn't find the tim
 
 New year, new blog!
 
+
 ## How the Blog Sausage is Made
+
+A friend who's had a [blog site](https://flutter.institute/why-i-left-ghost) for a while pointed me at a good looking theme for the Gatsby NodeJS framework called [Nehalem](https://github.com/nehalist/gatsby-theme-nehalem) that I've adopted for this site.
+
+The workflow is pretty easy.  Just clone the framework repo and run `npm install` and `gatsby develop` to test out the site on `http://localhost:8000`.  I've pushed my blog to https://github.com/catid/catid.io
+
+Whenever I push a new version of the blog scripts to GitHub, AWS Amplify picks it up and builds it and deploys it to https://catid.io
+
+Guide for AWS Amplify: [https://www.gatsbyjs.com/docs/how-to/previews-deploys-hosting/deploying-to-aws-amplify/](https://www.gatsbyjs.com/docs/how-to/previews-deploys-hosting/deploying-to-aws-amplify/)
+
+Ignore the example AWS Amplify site.  There's no need to add anything to the repo.  Getting the DNS authentication working was the only unexpected part of the setup.
+
+I'd like to use [CloudFlare's CDN](https://www.cloudflare.com/network/) to host my static site because it would load faster for people outside the USA, but haven't figured out how to get that to work with AWS Amplify yet.
+
+
+## Gatsby on Windows
+
+### The way to go: WSL2, Ubuntu app, Visual Studio Code
+
+I'm using Windows for development, which is a fantastic platform these days especially since WSL was introduced.  To set up an Ubuntu filesystem and shell, all you have to do is install the Ubuntu app from the Microsoft Store.  I used to use Git Bash before this but it was far more flaky.
 
 WSL install Windows 10 and upgrade to WSL2: [https://docs.microsoft.com/en-us/windows/wsl/install-win10](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
 
-Fix hostname resolution bug in WSL2: [https://github.com/microsoft/WSL/issues/5420](https://github.com/microsoft/WSL/issues/5420)
+After installing Ubuntu I had to fix one bug in the default scripts.  Fix hostname resolution bug in WSL2: [https://github.com/microsoft/WSL/issues/5420](https://github.com/microsoft/WSL/issues/5420)
 
-Able to edit the code using Visual Studio Code by just typing `code .`
-
-AWS Amplify: [https://www.gatsbyjs.com/docs/how-to/previews-deploys-hosting/deploying-to-aws-amplify/](https://www.gatsbyjs.com/docs/how-to/previews-deploys-hosting/deploying-to-aws-amplify/)
+And then I'm able to edit the blog code using Visual Studio Code by just typing `code .` in the git checkout, and it pops up in my familiar editor of choice.
