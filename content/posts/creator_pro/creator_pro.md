@@ -61,27 +61,31 @@ I had a bunch of Raspberry Pis around the house from working on my [Pi KVM proje
 ![OctoPi](octopi.jpg)
 
 
-## Simplify3D Process Settings
+## Simplify3D Process Settings (ABS)
 
 ### Extruder
 
-`Material`: `ABS`
-`Print Quality`: `High`
-`Extrusion Multiplier`: `1.00`
-`Extrusion Width`: `0.40 mm`
+* `Material`: `ABS`
+* `Print Quality`: `High`
+* `Extrusion Multiplier`: `1.00`
+* `Extrusion Width`: `0.40 mm`
+
+* `Retraction`: `Enabled`
+* `Retraction Distance`: `0.3 mm`
+* `Retraction Speed`: `1600.0 mm/min`
 
 ### Layer
 
-`Primary Extruder`: `Right Extruder`
-`Primary Layer Height`: `0.1 mm`
-`Top Solid Layers`: `5`
-`Bottom Solid Layers`: `4`
-`Outline Shells`: `2`
-`Outline Direction`: `Inside-Out`
+* `Primary Extruder`: `Right Extruder`
+* `Primary Layer Height`: `0.1 mm`
+* `Top Solid Layers`: `5`
+* `Bottom Solid Layers`: `4`
+* `Outline Shells`: `2`
+* `Outline Direction`: `Inside-Out`
 
-`First Layer Height`: `100%`
-`First Layer Width`: `100%`
-`First Layer Speed`: `20%`
+* `First Layer Height`: `100%`
+* `First Layer Width`: `100%`
+* `First Layer Speed`: `20%`
 
 ### Additions
 
@@ -89,31 +93,31 @@ None!  These are a pain to peel off with ABS/ASA so I got my prints working well
 
 ### Infill
 
-`Internal Fill Pattern`: `Rectilinear`
-`External Fill Pattern`: `Rectilinear`
+* `Internal Fill Pattern`: `Rectilinear`
+* `External Fill Pattern`: `Rectilinear`
 
 These turned out to be better than other options.
 
-`Interior Fill Percentage`: `30%`
-`Outline Overlap`: `40%`
-`Infill Extrusion Width`: `100%`
-`Combine Infill Every`: `2 layers`
+* `Interior Fill Percentage`: `30%`
+* `Outline Overlap`: `40%`
+* `Infill Extrusion Width`: `100%`
+* `Combine Infill Every`: `2 layers`
 
 ### Support
 
-`Generate Support Material`: `Yes!`
+* `Generate Support Material`: `Yes!`
 
 This is needed on a lot of cases because of vertical windows in the sides for ports.
 
-`Combine Support Every`: `2 Layers`
+* `Combine Support Every`: `2 Layers`
 
 ### Temperature
 
-`Heated Build Platform`: `100C`
+* `Heated Build Platform`: `100C`
 
 Before installing the glass bed, I had to use a higher 105C temperature, but after installing the glass bed it was necessary to reduce the temperature to avoid an elephant's foot in the first layer.
 
-`Right Extruder Temperature`: `242C`
+* `Right Extruder Temperature`: `242C`
 
 Before installing the all-metal hotends the ideal temperature was around 238C, but it's a bit higher with the additional metal.
 
@@ -159,6 +163,40 @@ This was important for a printing cases where there are screw holes that extend 
 
 * `Allowed perimeter overlap`: `70%`
 * `Avoid crossing outline for travel movements`: `Yes`
+
+
+## Simplify3D Process Settings (ASA)
+
+Using [Polylite ASA](https://us.polymaker.com/product/polylite-asa/).
+
+I settled on these by printing [this stringing test](https://www.thingiverse.com/thing:2219103) in a grid search for the right settings.
+
+Starting from ABS settings above:
+
+### Extruder
+
+* `Retraction Distance`: `1.0 mm`
+* `Retraction Speed`: `1800.0 mm/min`
+
+* `Coast at End`: `0.2 mm`
+
+Fighting stringing with this filament.  Cutting the extrusion a bit early and retracting harder seems to minimize it.
+
+### Advanced
+
+* `X/Y/Z Movement Speed`: `9000 mm/min`
+
+I increased movement speed to give it less time to string, which will make prints go faster but will probably introduce some vibration ringing into the outer perimeter of the prints.
+
+### Temperature
+
+* `Heated Build Platform`: `93C`
+
+ASA sticks pretty well to PEI and removes about as easily as ABS, at a lower temperature.
+
+* `Right Extruder Temperature`: `245C`
+
+The manufacturer recommended somewhere between 240C and 260C.  I wanted a lower temperature to reduce stringing, so err'd on the side of print quality over strength.
 
 
 ## Awesome Creator Pro Upgrades
