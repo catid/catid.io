@@ -6,3 +6,7 @@
   color: "#007acc"
   icon: ./assets/images/3dprint.jpg
   featured: true
+- name: "VR"
+  color: "#007acc"
+  icon: ./assets/images/vr.jpg
+  featured: true
