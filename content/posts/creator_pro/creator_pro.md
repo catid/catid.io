@@ -186,9 +186,11 @@ Fighting stringing with this filament.  Cutting the extrusion a bit early and re
 
 ### Advanced
 
-* `X/Y/Z Movement Speed`: `9000 mm/min`
+* `X/Y/Z Movement Speed`: `7000 mm/min`
 
 I increased movement speed to give it less time to string, which will make prints go faster but will probably introduce some vibration ringing into the outer perimeter of the prints.
+
+I've had a few failed prints at 9000 mm/min where the belts skipped, so backed off from those faster speeds.
 
 ### Temperature
 
