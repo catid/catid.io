@@ -12,8 +12,6 @@ updated: 2021-04-02
 
 I tried out a modern approach to image resampling: an end-to-end learned downsampler-then-upsampler.  The application would be to downsample the image, compress it using a traditional image/video compression method, and then upsample the image back to its original size.  This might be useful as part of a video pipeline.
 
-![Flow](flow.jpg)
-
 This project ( code = [https://github.com/sunwj/CAR](https://github.com/sunwj/CAR) paper = [Learned Image Downscaling for Upscaling using Content Adaptive
 Resampler](https://arxiv.org/pdf/1907.12904.pdf) ) was found by looking at [paperswithcode.com](https://paperswithcode.com/sota/image-super-resolution-on-set5-4x-upscaling), where it presently ranks as the best method by far.
 
