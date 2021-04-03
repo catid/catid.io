@@ -25,7 +25,7 @@ When there are single-pixel features, it does struggle as you'd expect.  But it 
 
 ## Windows Setup
 
-To get this going on a Windows with an Nvidia graphics card, I installed:
+To get this going on a Windows PC with an Nvidia graphics card, I installed:
 * [Rapid Environment Editor](https://www.rapidee.com/) - Used to easily edit the PATH variable.
 * [Git Bash](https://gitforwindows.org/)
 * [CUDA](https://developer.nvidia.com/cuda-downloads)
