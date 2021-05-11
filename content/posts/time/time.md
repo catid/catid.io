@@ -108,3 +108,5 @@ Now let's get more mental.
 Perhaps because we're not paying attention.
 
 What if what we choose to focus on as people causes our minds to become entangled with what we're seeing, slowing down and being slowed down together, while the world seems to slip by faster.
+
+Maybe that clock illusion where the first tick of a clock takes longer, when we start watching it, is part of reality rather than our minds. ;)
