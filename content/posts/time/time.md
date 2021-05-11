@@ -84,7 +84,7 @@ But why stop there?  Time is everywhere.
 
 ### Solid matter
 
-Maybe solid matter is so intensely interacting that it actually slows down in time to a crawl and sticks together.  Rocks and gems kind of look stopped in time.  What if they are?  But to particles in the rock, they're moving relative to eachother at a normal speed but the world is moving super fast around them.
+Maybe solid matter is so intensely interacting that it actually slows down in time to a crawl and sticks together.  Rocks and gems kind of look stopped in time.  What if they are?  Put your head IN THE ROCK.  To particles in the rock, they're moving relative to eachother at a normal speed with their rock buddies, but the world is moving super fast around them.
 
 Whew that one was too real let's escape back to the theoretical.
 
