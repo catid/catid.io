@@ -15,7 +15,23 @@ I had an awesome crackpot metaphysics idea last night that was too good not to s
 
 ### It's about time
 
+The idea:
+
+```
 When a particle observes other particles, those other particles seem to be moving slower in time when they are strongly interacting.  And other particles seem to be moving faster in time when they're weakly interacting.
+```
+
+Succinctly:
+
+```
+The speed of time between two particles is relative to the amount of interaction.
+```
+
+In Up-Goer 5:
+
+```
+Close things go normal, far things go fast.
+```
 
 Why might this be plausible?  Maybe the universe simulator takes longer to process particles that are interacting.
 
