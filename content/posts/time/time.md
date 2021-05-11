@@ -18,7 +18,8 @@ I had an awesome crackpot metaphysics idea last night that was too good not to s
 The idea:
 
 ```
-When a particle observes other particles, those other particles seem to be moving slower in time when they are strongly interacting.  And other particles seem to be moving faster in time when they're weakly interacting.
+When a particle observes other particles, those other particles seem to be moving slower in time when they are strongly interacting.
+And other particles seem to be moving faster in time when they're weakly interacting.
 ```
 
 Succinctly:
