@@ -124,7 +124,7 @@ To map a point from B (u, v) to the source point from A (x, y):
 
 ## Applications for 3 Point Parameterization
 
-Aside from human interactions, where someone using software is trying to draw an affine warp by hand there are also applications for computer vision.
+Aside from human interactions - where someone using graphics software is trying to draw an affine warp by hand - there are also applications for computer vision.
 
 For image registration (a key step in direct visual odometry, visual trackers, and marker trackers), software attempts to solve for an unknown transform, given two example images.
 
