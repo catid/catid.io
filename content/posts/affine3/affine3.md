@@ -1,7 +1,7 @@
 ---
 title: 3 Point Parameterization of Affine Transform
 path: "/affine3"
-featuredImage: "./ascii.png"
+featuredImage: "./affine.png"
 tags: ["Math"]
 excerpt: A Fine Transformation
 created: 2021-05-22
@@ -128,7 +128,7 @@ Aside from human interactions, where someone using software is trying to draw an
 
 For image registration (a key step in direct visual odometry, visual trackers, and marker trackers), software attempts to solve for an unknown transform, given two example images.
 
-It is little known that solving directly for the transform matrix has some disadvantages.  As explained by ["Parameterizing Homographies" (Baker & Kanade, 2006)](https://www.cs.cmu.edu/~ankurd/Site/Publications_files/baker_simon_2006_1.pdf) you get more accurate results by solving for the more intuitive representation using the 3 corner control points.  In a bit we'll show intuitively why that is the case.
+It is little known that solving directly for the transform matrix has some disadvantages.  As explained by ["Parameterizing Homographies" (Baker & Kanade, 2006)](https://www.cs.cmu.edu/~ankurd/Site/Publications_files/baker_simon_2006_1.pdf) you get more accurate results by solving for the more intuitive representation using the 3 corner control points.  In a bit we'll show intuitively why that is the case [1*].
 
 The three corner control points are specified by 6 floating point values (3 x, y coordinates), just as there are 6 variables in the matrix.
 
@@ -158,6 +158,8 @@ First simplify the problem and assume normalized corner coordinates `{ (0, 0), (
     T_norm = [ v2-v1   v3-v1   v1 ]
              [     0       0    1 ]
 ```
+
+To return to the previous section [1*] we can now see why using this matrix representation intuitively has worse convergence.  An optimizer iteratively nudges each of the 6 values based on the local gradient, but when the optimizer tries to adjust one variable independently it is unintentionally also disturbing other control points.  Using independent variables for optimization is worth the effort.
 
 By simply multiplying by `Diag(1/w, 1/h)` we recover the forward affine transform matrix for rectangular images of (w, h) pixels:
 
