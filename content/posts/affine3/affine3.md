@@ -1,6 +1,7 @@
 ---
 title: 3 Point Parameterization of Affine Transform
 path: "/affine3"
+featuredImage: "./ascii.png"
 tags: ["Math"]
 excerpt: A Fine Transformation
 created: 2021-05-22
