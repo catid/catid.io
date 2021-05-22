@@ -172,10 +172,8 @@ The final elegant result in C++ code:
     #include <cmath> // std::abs
 
     struct AffineTransformMatrix {
-        struct {
-            float R11, R12, t0;
-            float R21, R22, t1;
-        };
+        float R11, R12, t0;
+        float R21, R22, t1;
 
         bool From3PtParams(
             float w, float h, // Size of input image in pixels.
@@ -193,6 +191,7 @@ The final elegant result in C++ code:
                 return false;
             }
 
+            // Denormalize to actual input image size.
             w = 1.f / w;
             h = 1.f / h;
             R11 *= w; R12 *= h;
