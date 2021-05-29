@@ -58,9 +58,9 @@ Note that if implementing 2x super-resolution, the previous output of the algori
 
 Following the efficient Inverse Compositional algorithm described by Baker & Matthews, we compute the image gradients, pre-compute the Jacobian images, and the Hessian from those, for each layer of the pyramid.  Note these are all applied to the smaller template image pyramid that is not super-sampled.
 
-Super-sampling is only applied at one place in the algorithm, where image warping occurs, which is the only place the image-to-warp is used at all.  It does not matter how large or small the image-to-warp is, so super-sampling does not slow down the image warp, it only improves quality.
+Super-sampling is only applied at one place in the algorithm, where image warping occurs, which is the only place the image-to-warp is used at all.  It does not matter how large the image-to-warp is, so super-sampling does not slow down the image warp, it only improves quality.
 
-It seems to help most on images that have many fine details, a spiderweb of ocean waves, powerlines and so on.  In some cases it makes the difference between working at all, and not.
+It seems to help most on images that have many fine details, a spiderweb of ocean waves, powerlines and so on.  Based on the images used in synthetic tests, it can consistently make the difference between finding the correct transform, and diverging and failing.
 
 
 ## How does Super-Sampling compare to Bicubic Interpolation?
@@ -74,3 +74,10 @@ Bicubic interpolation is performed during image warping, which is done in the in
 Super-sampling is performed once during pyramid creation, and increases the cost of forming the pyramid by 4x, but its cost does not increase after that point.
 
 Bicubic interpolation is cheap to perform on the first few layers of the pyramid that are low resolution, so is certainly a good idea there.  It is less clear if bicubic interpolation is a good idea to apply near the full resolution of the image as running more iterations might improve quality more for the same amount of processing time.
+
+
+## What other factors contribute to Lucas-Kanade succeeding?
+
+The number of iterations at each layer of the pyramid, and the target error make a huge difference in the rate of convergence.  So making that inner loop as cheap and fast as possible is a good idea.
+
+Reducing the number of parameters to estimate also has a huge impact.  It is mentioned in several of the references that estimating for 2-point parameterization instead of 4-point parameterization yields more accurate results, when fewer points can be used.  Also each parameter to estimate is another inner loop image dot product, so reducing parameters linearly reduces the cost of the inner loop and allows more iterations for better convergence.
