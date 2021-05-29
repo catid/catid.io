@@ -5,7 +5,7 @@ excerpt: What was I doing before startups?
 tags: ["Game Hacking"]
 ---
 
-![MERVBot](./mervbot.jpg)
+![MERVBot](./game_hacking/mervbot.jpg)
 
 ## Daycare
 
@@ -13,7 +13,7 @@ tags: ["Game Hacking"]
 
 A friend and I transcribed the entire Apple II floppy disk software for Oregon Trail into a spiral notebook, made modifications to it, and typed it all back into the Commodore 64 at the daycare center.  We called it Bum's Trail.
 
-![The Thing](./the_thing.jpg)
+![The Thing](./game_hacking/the_thing.jpg)
 
 We also made an airplane.  It flew one time.
 
@@ -25,7 +25,7 @@ I developed a prime number generator in BASIC as one of my first programs.  It s
 
 I also built massive block forts:
 
-![Button Contraption](./blocks.jpg)
+![Button Contraption](./game_hacking/blocks.jpg)
 
 And I was married in a fake ceremony at 7 years old, though I'm still not really married today. :)
 
@@ -59,7 +59,7 @@ In high school, I was the kid walking around campus keeping to himself constantl
 
 I got really into an online multiplayer game called VIE SubSpace, which also had a healthy reverse-engineering scene.  The SubSpace community was supported by [PriitK](https://en.wikipedia.org/wiki/Priit_Kasesalu) who was a talented C++ software developer from Estonia, who rewrote the server and client software so that it could continue being played.
 
-I worked with another hacker I only know as Coconut Emulator, to develop a game-hosting bot supporting plugins for SubSpace called ![MERVBot](./mervbot.jpg)
+I worked with another hacker I only know as Coconut Emulator, to develop a game-hosting bot supporting plugins for SubSpace called ![MERVBot](./game_hacking/mervbot.jpg)
 
 This was my first medium sized C++ project and was about the time that I learned about memory safety bugs. ;)
 
@@ -105,6 +105,6 @@ Two nice features of proxy game hacks is that they cannot be detected, since the
 
 After moving to California, I've put my game hacking days behind me.  Lots of fond memories.  I'd totally recommend getting into this as a hobby.
 
-![Farewell](./startups.jpg)
+![Farewell](./game_hacking/startups.jpg)
 
 Since then, I've bootstrapped myself as a hard-working startup software engineer with a penchant for rock climbing.  My first startup employer was [Game Closure](https://www.gameclosure.com/), 6 years before it became worth $1 billion.  I then joined up with Oculus, which was sold to Facebook for $2.5 billion.  I wrote most of the non-graphical backend software powering the Oculus Rift on the Windows PC platform, like the installer, firmware updater, hardware abstraction layer, inter-process communication, etc.  The [book about Oculus](https://www.amazon.com/History-Future-Facebook-Revolution-Virtual/dp/0062455966) is worth a read.  I'm currently leading the Video team at [Anduril Industries](https://www.anduril.com/), which is now worth $1.9 billion.
