@@ -1,11 +1,10 @@
 ---
 title: Proto Game Hacker Origin Story
+featuredImage: "./game_hacking/mervbot.jpg"
 path: "/game_hacking"
 excerpt: What was I doing before startups?
 tags: ["Game Hacking"]
 ---
-
-![MERVBot](./game_hacking/mervbot.jpg)
 
 ## Daycare
 
