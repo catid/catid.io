@@ -1,7 +1,7 @@
 ---
 title: Improving Lucas-Kanade with Super-Sampling
 path: "/lkss"
-featuredImage: "./pyramid.jpg"
+featuredImage: "./pyramid.png"
 tags: ["Math"]
 excerpt: Super-Size my Sampler
 created: 2021-05-29
