@@ -3,7 +3,7 @@ title: Improving Lucas-Kanade with Super-Sampling
 path: "/lkss"
 featuredImage: "./pyramid.jpg"
 tags: ["Math"]
-excerpt: Lucas-Kanade is based on an image pyramid.
+excerpt: Super-Size my Sampler
 created: 2021-05-29
 updated: 2021-05-29
 ---
