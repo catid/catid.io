@@ -49,7 +49,7 @@ So it is well understood that super-sampling improves the quality of resampling 
 
 ## For a photographic image, how do we super-sample?
 
-To form a super-sampled Gaussian image pyramid, first upsample the image using any bicubic or learned method.  Bicubic spline seems to work best to double or halve an image while preserving the details.  Upsampling is fairly fast because it is separable: It can proceed first by doubling the width of the image and then the height for example, and the kernel is separable/1D and constant.  For comparison, bicubic image warping has a different kernel for every pixel that has to be calculated on the fly.  Then form a canonical Gaussian image pyramid from the larger image by blurring the image and downsampling it 2x by discarding every other pixel.
+To form a super-sampled Gaussian image pyramid, first upsample the image using any bicubic or learned method.  Bicubic spline seems to work best to double or halve an image while preserving the details.  Upsampling is fairly fast because it is separable: It can proceed first by doubling the width of the image and then the height for example, and the kernel is separable/1D and constant.  Then form a canonical Gaussian image pyramid from the larger image by blurring the image and downsampling it 2x by discarding every other pixel.
 
 Note that if implementing 2x super-resolution, the previous output of the algorithm can provide this upsampled image for free.
 
@@ -69,7 +69,7 @@ Both approaches should be used because they are both cheap and both provide noti
 
 Comparing the impact of the two, super-sampling has a significantly larger impact on quality than the interpolation method used, which makes sense because it's introducing new real data.  Bicubic interpolation improves accuracy on synthetic tests by about 25%.  Super-sampling makes a massive 400% improvement in accuracy.
 
-Bicubic interpolation is performed during image warping, which is done in the inner loop of Lucas-Kanade, and its cost increases with iteration count and image size,.  It reads from 4x4 pixels for each output pixel instead of 2x2 for bilinear sampling.  It then computes a different kernel on the fly for each of these pixels using a mathematical function.  Bicubic Spline is a popular choice, though Lanczos2 implemented with fast sinc() approximations provides a noticeably better result.
+Bicubic interpolation is performed during image warping, which is done in the inner loop of Lucas-Kanade, and its cost increases with iteration count and image size.  It reads from 4x4 pixels for each output pixel instead of 2x2 for bilinear sampling.  It then computes a different kernel on the fly for each of these pixels using a mathematical function.  Bicubic Spline is a popular choice, though Lanczos2 implemented with fast sinc() approximations provides a noticeably better result.
 
 Super-sampling is performed once during pyramid creation, and increases the cost of forming the pyramid by 4x, but its cost does not increase after that point.
 
