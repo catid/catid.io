@@ -21,7 +21,7 @@ updated: 2021-05-22
 There are many ways to warp an image.  Some of the most useful ways:
 
 * Translation: Motion defined by how corner 1 moves.
-* Euclidean: Motion defined by how corners 1, 2 move.
+* Similarity: Motion defined by how corners 1, 2 move.
 * Affine: Motion defined by how corners 1, 2, 3 move.
 * Homography/Perspective/Projective: Motion defined by how all corners move.
 
