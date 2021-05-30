@@ -231,11 +231,56 @@ The final elegant result in C++ code:
 ```
 
 
-## Wrap Up
+## Similarity (2-point) Transform
 
-To get the backward transform, use the fast matrix inverse method described earlier.
+Representing similarity transform with 2 corners of image:
 
-And to get the matrix transform between two affine warped images (`A -> B`) specified by control points, we can simply combine two transforms:
+```
+        1-------------2
+        |             |       1-----2
+        |      A      |  ---> |  B  |
+        |             |       +-----+
+        +-------------+
+```
+
+Similarity transforms capture changes in translation, rotation, scale.
+This is different from Euclidean transforms that cannot represent scale.
+
+When working with global-shutter far-field imagery, similarity transforms are
+sufficient for characterizing camera frame motion: Panning, zooming, rotation.
+These can be parameterized by how any 2 corners of the image are moving.
+We choose the top two corners so that most of the coordinates are zeroes.
+
+But when warping an image, it's necessary to convert back from the corners
+representation to the usual 2x3 affine transform matrix because this is the
+most efficient parameterization of the transform for an image warp.
+
+The forward transform from points in A -> points in B can be calculated:
+
+```
+    T * (x, y) = (u, v)
+
+        [  A B C ]
+    T = [ -B A D ]
+        [  0 0 1 ]
+```
+
+Choosing normalized corner coordinates `(x, y) = { (0, 0), (1, 0) }`, it is trivial to solve for T by hand:
+
+```
+        [ u2-u1   v1-v2   u1 ]
+    T = [ v2-v1   u2-u1   v1 ]
+        [     0       0    1 ]
+```
+
+This expression is equally as elegant as the affine transform version.
+
+
+## Extensions
+
+To get the backward transform for e.g. rendering, use the fast matrix inverse method described earlier.
+
+And to get the matrix transform between two warped images (`A -> B`) specified by control points, we can simply combine two transforms:
 
 ```
     T_AB = Inv(T_norm(A)) * T_norm(B)
@@ -243,4 +288,13 @@ And to get the matrix transform between two affine warped images (`A -> B`) spec
 
 Note that we can pick the "intermediate" rectangular image to be normalized in size, so there is no need to fix the scale.
 
+
+## Is this new?
+
+While these results seem simple, they are also unpublished and uncommon:
+
 These validated results are simpler than any other methods in use today.  For example OpenCV is solving a giant 6x6 linear system [using generic approaches](https://github.com/opencv/opencv/blob/ac8e7d57dc64b0fbb41710f11cbd0338ec1219a7/modules/imgproc/src/imgwarp.cpp#L3325).
+
+Stack Overflow suggests similarly complex algorithms to compute these transforms.
+
+`"A Closed-Form Solution for the Similarity Transformation Parameters of Two Planar Point Sets" (Shamsudin, 2013)` suggests a much more complex calculation as well.
