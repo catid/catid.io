@@ -255,19 +255,15 @@ But when warping an image, it's necessary to convert back from the corners
 representation to the usual 2x3 affine transform matrix because this is the
 most efficient parameterization of the transform for an image warp.
 
-The forward transform from points in A -> points in B can be calculated:
+The forward transform from points in A -> points in B is trival to solve by hand by again choosing normalized corner coordinates `(x, y) = { (0, 0), (1, 0) }` -> `(u, v) = { (u1, u2), (v1, v2) }`:
 
 ```
-    T * (x, y) = (u, v)
+    T_norm * (x, y) = (u, v)
 
-        [  A  B  C ]
-    T = [ -B  A  D ]
-        [  0  0  1 ]
-```
+             [  A  B  C ]
+    T_norm = [ -B  A  D ]
+             [  0  0  1 ]
 
-Choosing normalized corner coordinates `(x, y) = { (0, 0), (1, 0) }`, it is trivial to solve for T by hand:
-
-```
     A = u2 - u1
     B = v1 - v2
     C = u1
