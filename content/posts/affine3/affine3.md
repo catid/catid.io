@@ -260,20 +260,31 @@ The forward transform from points in A -> points in B can be calculated:
 ```
     T * (x, y) = (u, v)
 
-        [  A B C ]
-    T = [ -B A D ]
-        [  0 0 1 ]
+        [  A  B  C ]
+    T = [ -B  A  D ]
+        [  0  0  1 ]
 ```
 
 Choosing normalized corner coordinates `(x, y) = { (0, 0), (1, 0) }`, it is trivial to solve for T by hand:
 
 ```
-        [ u2-u1   v1-v2   u1 ]
-    T = [ v2-v1   u2-u1   v1 ]
-        [     0       0    1 ]
+    A = u2 - u1
+    B = v1 - v2
+    C = u1
+    D = v1
 ```
 
 This expression is equally as elegant as the affine transform version.
+
+By simply multiplying by `Diag(1/w, 1/w)` we recover the forward transform matrix for rectangular images of (w, h) pixels.
+
+```
+                 [ 1/w    0]   [ (u2-u1)/w   (v1-v2)/w   u1 ]
+    T = T_norm * [         ] = [ (v2-v1)/w   (u2-u1)/w   v1 ]
+                 [   0  1/w]   [     0           0        1 ]
+```
+
+The same code used to render an affine transform can be used to render a similarity transform, without performance penalty.
 
 
 ## Extensions
