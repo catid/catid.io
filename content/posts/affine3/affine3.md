@@ -243,7 +243,7 @@ Representing similarity transform with 2 corners of image:
         +-------------+
 ```
 
-Similarity transforms capture changes in translation, rotation, scale.
+Similarity transforms capture changes in translation, rotation, and scale.
 This is different from Euclidean transforms that cannot represent scale.
 
 When working with global-shutter far-field imagery, similarity transforms are
@@ -276,7 +276,7 @@ Choosing normalized corner coordinates `(x, y) = { (0, 0), (1, 0) }`, it is triv
 
 This expression is equally as elegant as the affine transform version.
 
-By simply multiplying by `Diag(1/w, 1/w)` we recover the forward transform matrix for rectangular images of (w, h) pixels.
+By simply multiplying by `Diag(1/w, 1/w)` we recover the forward transform matrix for rectangular images of width `w` pixels.  Yes, it only depends on the width of the image unlike the affine transform.
 
 ```
                  [ 1/w    0]   [ (u2-u1)/w   (v1-v2)/w   u1 ]
@@ -290,6 +290,8 @@ The same code used to render an affine transform can be used to render a similar
 ## Extensions
 
 To get the backward transform for e.g. rendering, use the fast matrix inverse method described earlier.
+
+The scaled transform formulas above are the ones to use when computing Jacobians of the transform, meaning that the pixel coordinates end up being normalized from 0..1 in the calculations (e.g. derivative of `x` with respect to `u1` is `u1/w`) which improves numerical stability.
 
 And to get the matrix transform between two warped images (`A -> B`) specified by control points, we can simply combine two transforms:
 
