@@ -287,7 +287,7 @@ The same code used to render an affine transform can be used to render a similar
 
 To get the backward transform for e.g. rendering, use the fast matrix inverse method described earlier.
 
-The scaled transform formulas above are the ones to use when computing Jacobians of the transform, meaning that the pixel coordinates end up being normalized from 0..1 in the calculations (e.g. derivative of `x` with respect to `u1` is `u1/w`) which improves numerical stability.
+The scaled transform formulas above are the ones to use when computing Jacobians of the transform, meaning that the pixel coordinates end up being normalized from 0..1 in the calculations (e.g. derivative in `x` direction with respect to `u1` is `x/w`), which improves numerical stability.
 
 And to get the matrix transform between two warped images (`A -> B`) specified by control points, we can simply combine two transforms:
 
