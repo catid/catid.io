@@ -7,7 +7,7 @@
     "url": "https://catid.io"
   },
   "private": true,
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "n/a",
   "license": "MIT",
   "scripts": {
@@ -18,8 +18,8 @@
   },
   "dependencies": {
     "@nehalist/gatsby-theme-nehalem": "*",
-    "gatsby": "^2.32.13",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0"
+    "gatsby": "^3.9.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   }
 }
